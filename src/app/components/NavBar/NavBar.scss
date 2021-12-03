@@ -1,0 +1,32 @@
+@import '../../base/colors.scss';
+
+.nav-bar {
+  background: #fff;
+  padding: 0 50px 0 0;
+}
+
+.nav-menu {
+  line-height: 45px;
+}
+
+.nav-menu-item {
+  display: block;
+  line-height: 22px;
+  min-width: 125px;
+  height: auto;
+  padding: 10px 14px;
+  background-color: #f8f8f8;
+  color: #585858;
+  float: left;
+  text-align: center;
+  align-items: center;
+  margin-left: 0;
+  position: relative;
+}
+
+.nav-menu-icon {
+  display: block;
+  min-width: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}

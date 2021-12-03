@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // Added dom as parent folder has DOM based libraries, doesn't affect compiled output
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}

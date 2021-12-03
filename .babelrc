@@ -1,0 +1,29 @@
+{
+  // https://babeljs.io/docs/usage/babelrc/, (JSON5 format)
+  // Explicitly specifying the browsers for which our javascript should be compiled.
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "Chrome >= 48",
+          "FireFox >= 44",
+          "Safari >= 7",
+          "last 4 Edge versions"
+        ]
+      },
+      // Use built in presets to replace preset configs of ES2015+ down to ES5.
+      "useBuiltIns": true
+    }]
+  ],
+  "ignore": [
+    "node_modules"
+  ],
+  // https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
+  // https://babeljs.io/docs/plugins/transform-class-properties/
+  // This plugin transforms es2015 static class properties as well as properties declared with the es2016 property initializer syntax.
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+  ]
+}

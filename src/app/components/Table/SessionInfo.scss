@@ -1,0 +1,15 @@
+@import '../../base/colors.scss';
+
+.session-title {
+  color: $c-text-link-color;
+  text-decoration: none;
+  font-size: $font-size-regular;
+}
+
+.session-info {
+  color: $c-text-sub-color;
+  font-size: $font-size-small;
+  > span {
+    margin-right: $space-xs;
+  }
+}

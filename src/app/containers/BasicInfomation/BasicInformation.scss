@@ -1,0 +1,29 @@
+//TODO In current behavior, the header and footer are not fixed and scroll away when scrolling the page.
+// The form should scroll between the header and footer. Possible to achieve with correct css
+@import '../../base/colors';
+.formLength {
+  width: 32% !important;
+}
+
+.codeBoxDemo{
+  position: absolute;
+  border-bottom: 1px solid #ebedf0;
+  padding: 42px 24px 50px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.formItem {
+  margin-bottom: 17px;
+}
+
+.formItemProfile {
+  margin-bottom: 0px;
+}
+
+.basicInformationForm {
+  padding: 42px 24px 50px;
+  left: 5%;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}

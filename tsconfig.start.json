@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "ES6",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noErrorTruncation": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "types": ["src/types"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/type-declarations"
+    ],
+    "types": [
+      "webpack-env",
+      "mocha",
+      "node"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+    "./lib/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./src/**/*.scss",
+    "dist",
+    "tmp"
+  ]
+}

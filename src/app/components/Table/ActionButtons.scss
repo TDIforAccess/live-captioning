@@ -1,0 +1,48 @@
+@import '../../base/colors.scss';
+
+.button-primary {
+  color: #fff;
+  background-color: $c-header-bg-color;
+  border-color: $c-header-bg-color;
+  margin: 4px;
+  padding: 0 8px;
+  &:hover {
+    color: $c-header-bg-color;
+    background-color: #fff;
+    border-color: $c-header-bg-color;
+  }
+  &:active {
+    color: $c-header-bg-color;
+    background-color: #fff;
+    border-color: $c-header-bg-color;
+  }
+  &:focus {
+    color: #fff;
+    background-color: $c-header-bg-color;
+    border-color: $c-header-bg-color;
+  }
+}
+
+.button-danger{
+  color: #fff;
+  background-color: $c-button-danger-color;
+  border-color: $c-button-danger-color;
+  margin: 4px;
+  padding: 0 8px;
+  &:hover {
+    color: $c-button-danger-color;
+    background-color: #fff;
+    border-color: $c-button-danger-color;
+  }
+  &:active {
+    color: $c-button-danger-color;
+    background-color: #fff;
+    border-color: $c-button-danger-color;
+  }
+  &:focus {
+    color: #fff;
+    background-color: $c-button-danger-color;
+    border-color: $c-button-danger-color;
+  }
+}
+

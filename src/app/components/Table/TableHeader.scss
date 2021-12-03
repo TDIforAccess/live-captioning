@@ -1,0 +1,12 @@
+@import '../../base/colors.scss';
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: inline-flex;
+  align-items: center;
+}

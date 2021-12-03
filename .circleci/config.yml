@@ -1,0 +1,83 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.7
+    # We were not able to make work with /home/circleci/cache
+    # Need to check documentation if we missed something
+    # Confirms that it exits at first failure https://circleci.com/docs/2.0/configuration-reference/#the-when-attribute
+    working_directory: ~/tdi-react-app
+    steps:
+      - checkout
+      - save_cache:
+          key: repo-cache-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/tdi-react-app
+      - run:
+          name: Create cache key from dependencies lock file
+          # we need the state of the file that is in the repo, it might change during npm install
+          command: cp package-lock.json package-lock.json.key
+      - restore_cache:
+          keys:
+            - v1-dependency-cache-{{ checksum "package-lock.json.key" }}
+      - run:
+          name: Install node modules
+          command: npm install
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "package-lock.json.key" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: check for compiler errors
+          command: npm run tsc
+      # This gets the hash of the master commit from which the current branch split off
+      - run:
+          name: Create cache key for tests
+          command: ./circle.test-cache-keys.sh
+      - restore_cache:
+          keys:
+            - v1-test-cache-{{ checksum "test-cache-build-src.key" }}-{{ checksum "test-cache-git.restore.key" }}-{{ .Branch }}-{{ checksum "test-cache-date.key" }}
+            - v1-test-cache-{{ checksum "test-cache-build-src.key" }}-{{ checksum "test-cache-git.restore.key" }}-{{ .Branch }}
+            - v1-test-cache-{{ checksum "test-cache-build-src.key" }}-{{ checksum "test-cache-git.restore.key" }}
+            - v1-test-cache-{{ checksum "test-cache-build-src.key" }}
+      - run:
+          name: run tests with coverage
+          command: npm run test
+      - run:
+          name: Perform tslint Check
+          command: npm run tslint
+      - run:
+          name: Building App
+          command: npm run build:fbdev
+      - store_artifacts:
+          path: dist/
+          destination: tdi-react-build/
+      - persist_to_workspace:
+          root: ~/tdi-react-app
+          paths:
+            - package.json
+            - dist
+            - firebase.json
+            - .firebaserc
+
+  deployment:
+    working_directory: ~/tdi-react-app
+    docker:
+        - image: circleci/node:10.7
+    steps:
+      - attach_workspace:
+          at: ~/tdi-react-app
+      - run: npm install firebase-tools
+      - run: npm run deploy -- --token ${FIREBASE_DEPLOY_TOKEN}
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deployment:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

@@ -1,0 +1,1 @@
+export {MailingListContainer} from "./MailingListView";

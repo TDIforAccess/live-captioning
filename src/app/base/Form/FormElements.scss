@@ -1,0 +1,24 @@
+@import '../colors';
+.formLength {
+  width: 32% !important;
+}
+.formItem {
+  margin-bottom: 17px;
+}
+
+.customForm {
+  padding: 42px 24px 50px;
+  left: 5%;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+
+.spinner {
+  text-align: center;
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 40% 80%;
+  margin: 5% 20%;
+}

@@ -1,0 +1,11 @@
+./.circleci/config.yml
+./circle.test-cache-keys.sh
+./circle.test-cache-keys.buildSrc.lst
+./mocha.opts
+./package.json
+./package-lock.json
+./tsconfig.json
+./test/_bootstrap.ts
+./webpack/webpack.config.v1.ts
+./webpack/loaders.ts
+./webpack/plugins.ts

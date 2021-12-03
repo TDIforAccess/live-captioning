@@ -1,0 +1,8 @@
+.cache/
+.idea/
+dist/
+node_modules/
+webpack/stats
+.firebase
+src/app/*.js
+functions/node_modules

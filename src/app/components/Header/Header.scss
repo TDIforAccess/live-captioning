@@ -1,0 +1,19 @@
+@import '../../base/colors.scss';
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: none;
+  margin: 0px 22px 17px 0px;
+  float: left;
+  width: 120px;
+  height: 31px;
+}
+
+.header {
+  background: $c-header-bg-color;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  padding: 0 25px;
+}

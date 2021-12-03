@@ -1,0 +1,229 @@
+{
+  "app": {
+    "example": {
+      "new_key": "Example",
+      "template_key": "Item {currentItem} of {total}"
+    },
+    "appName": "Live Captioning",
+    "footer": {
+      "text": "Copyright © 2019 Telecommunications for the Deaf and Hard of Hearing, Inc. All rights reserved."
+    },
+    "loginForm": {
+      "emailHint": "Email",
+      "emailMessage": "Please input your email!",
+      "forgotPassword": "Forgot Password",
+      "loginButton": "Log In",
+      "logoutButton": "Log Out",
+      "passwordHint": "Password",
+      "passwordMessage": "Please input your Password!",
+      "registerNow": "Register Now",
+      "rememberMe": "Remember Me",
+      "googleLogin": "google"
+    },
+    "basicInformationForm": {
+      "label": {
+        "email": "Provided Email",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "contactNumber": "Phone Number",
+        "companyName": "Company Name",
+        "address": "Street Address",
+        "country": "Country",
+        "city": "City",
+        "state": "State/Province",
+        "zipCode": "Zip Code",
+        "role": "Role",
+        "businessPhoneNumber": "Business Phone Number"
+      },
+      "requireMessage": {
+        "firstName": "Please input your first name!",
+        "email": "Please input your email address!",
+        "lastName": "Please input your last name!",
+        "contactNumber": "Please input your contact number!",
+        "companyName": "Please input your company name!",
+        "address": "Please input your address!",
+        "country": "Please input your country!",
+        "city": "Please input your city!",
+        "state": "Please input your state!",
+        "zipCode": "Please input your zip code!",
+        "businessPhoneNumber": "Please input your business phone number!"
+      },
+      "forgotPassword": "Forgot Password",
+      "loginButton": "Log In",
+      "logoutButton": "Log Out",
+      "passwordHint": "Password",
+      "passwordMessage": "Please input your Password!",
+      "registerNow": "Register Now",
+      "rememberMe": "Remember Me",
+      "googleLogin": "google"
+    },
+    "documentCreateForm": {
+      "requireMessage": {
+        "sessionName": "Please provide a name for the session.",
+        "viewersNumber": "Please provide the number of viewers planned for the session.",
+        "sessionLength": "Please select the session duration.",
+        "sessionStart": "Please select start time for the session.",
+        "sessionEnd": "Please select end time for the session.",
+        "integer": "Please provide a number value between {min} and {max}."
+      },
+      "label": {
+        "sessionName": "Session name",
+        "sessionEnd": "Session end",
+        "sessionLength": "Session length (minutes)",
+        "sessionStart": "Session start",
+        "viewersNumber": "Number of viewers",
+        "timezone": "Session Time Zone",
+        "publicPrivate": "Is session public?",
+        "checkedYes": "Yes",
+        "unCheckedNo": "No",
+        "goToSession": "Goto Session"
+      }
+    },
+    "uploadMailingList": {
+      "title": "Upload List",
+      "message": {
+        "listName": "List Name cannot be empty.",
+        "duplicateListName": "A list with this name already exists.",
+        "fileList": "No File Uploaded",
+        "listSuccess": "{listName} was successfully created from emails in uploaded file."
+      },
+      "placeHolder": {
+        "listName": "Enter List Name",
+        "uploadBoxDesc1": "Click or drag file to this area to upload",
+        "uploadBoxDesc2": "Support for a single or bulk upload for emails. Strictly prohibited to upload any personal & proprietary data."
+      },
+      "uploadStatus": {
+        "invalidEmail": "Following emails in the file are invalid and would be ignored {list}",
+        "uploadSuccess": "{name} file uploaded successfully.",
+        "uploadFailure": "{name} file upload failed."
+      },
+      "button": {
+        "submitList": {
+          "desc": "Submit List"
+        }
+      },
+      "downloadSample": "Download Sample"
+    },
+    "createMailingList": {
+      "title": "Create List",
+      "message": {
+        "listName": "List Name cannot be empty",
+        "emailTags": "No emails specified.",
+        "invalidEmail": "Invalid Email id.",
+        "duplicateEmail": "Email already exists.",
+        "listSuccess": "{listName} was successfully created from emails provided."
+      },
+      "placeHolder": {
+        "listName": "Enter List Name",
+        "newMailTag": "New Email"
+      },
+      "button": {
+        "createList": {
+          "desc": "Create List"
+        }
+      }
+    },
+    "modifyMailingList": {
+      "listTitle": "Mails in List {listName}",
+      "message": {
+        "emailTags": "No emails specified.",
+        "invalidEmail": "Invalid Email id.",
+        "duplicateEmail": "Email already exists."
+      },
+      "placeHolder": {
+        "listName": "Enter List Name",
+        "newMailTag": "New Email"
+      },
+      "button": {
+        "addEmailsToList": {
+          "desc": "Add Emails To List"
+        },
+        "delete": {
+          "desc": "Delete Emails"
+        }
+      }
+    },
+    "documentShare": {
+      "title":"Session Share",
+      "mailList": "Mails in list {listName}",
+      "message": {
+        "emailTags": "No emails specified."
+      },
+      "placeHolder": {
+        "newMailTag": "New Email"
+      },
+      "button": {
+        "addEmailsToList": {
+          "desc": "Share"
+        },
+        "delete": {
+          "desc": "Add Emails to share"
+        }
+      }
+    },
+    "navbar": {
+      "createSession": "Create Session",
+      "dashboard": "Dashboard",
+      "mailLists": "Mail Lists",
+      "profile": "Profile",
+      "logout": "Log out from Live Captioning."
+    },
+    "tables": {
+      "creatorTable": "Sessions created by me",
+      "shareTable": "Sessions shared with me",
+      "columns": {
+        "sessions": "Sessions",
+        "actions": "Actions"
+      },
+      "sessionColumn": {
+        "shares": "Shared",
+        "createdAt": "Created On"
+      },
+      "header": {
+        "search": "Search: ",
+        "display": "Display ",
+        "records": " records"
+      },
+      "footer": {
+        "paginationText": "Showing {start} to {end} of {total} entries"
+      },
+      "dialogButton": {
+        "okText": "Yes",
+        "cancelText": "No"
+      },
+      "deleteSuccess": "Successfully deleted the selected session.",
+      "deleteFailed": "Failed to deleted the selected session. Please try again or check your connection.",
+      "actionColumn": {
+        "editSession": "Edit this session",
+        "deleteSession": "Are you sure that you want to delete this session?",
+        "downloadSession": "Download this session",
+        "inviteEditor": "Invite people to session as Caption Corrector",
+        "inviteViewer": "Invite people to session as Caption Viewer",
+        "viewSession": "View this session"
+      }
+    },
+    "editorOperations": {
+      "settings": "Settings",
+      "capitalize": "Capitalize Selection",
+      "speakSelected": "Speak Selected",
+      "pauseSpeaking": "Pause Speaking",
+      "stopSpeaking": "Stop Speaking",
+      "resumeSpeaking": "Resume Speaking",
+      "fullScreen": "Go Full Screen",
+      "errorNoSelection": "Please select some text."
+    },
+    "editorSettings": {
+      "title": "Settings",
+      "default": "Default Settings",
+      "backgroundColor": "Editor BackGround Color",
+      "textColor": "Editor Text Color",
+      "fontSize": "Font Size",
+      "fontFamily": "Font Family",
+      "wordSpace": "Word Spacing",
+      "letterSpace": "Letter Spacing",
+      "lineSpace": "Line Spacing",
+      "saveSuccess": "Successfully saved change in settings.",
+      "retry": "Please try again."
+    }
+  }
+}

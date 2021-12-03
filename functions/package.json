@@ -1,0 +1,25 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "clean": "rm -rf lib/*",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "npm run clean; firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^6.4.0",
+    "firebase-functions": "^2.1.0",
+    "mailgun-js": "^0.22.0"
+  },
+  "devDependencies": {
+    "@types/mailgun-js": "^0.16.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "private": true
+}

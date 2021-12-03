@@ -1,0 +1,10 @@
+--require cache-require-paths
+--require ts-node/register/type-check
+--require tsconfig-paths/register
+--require test/_bootstrap.ts
+--require jsdom-global/register
+--reporter spec
+--watch-extensions tsx,ts
+
+src/**/*.spec.tsx
+src/**/*.spec.ts
